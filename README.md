@@ -24,9 +24,22 @@ Create a small, fast, private AI model from big models like ChatGPT, Claude, or 
 
 ---
 
-## 🚀 Quick Start
+## 🚀 One Command Setup
 
-### Option 1: Resilient Collection (handles rate limits automatically!)
+```bash
+git clone https://github.com/r2d2helper1-creator/tiny-distill.git
+cd tiny-distill
+bash setup.sh
+```
+
+**That's it.** The script walks you through everything:
+1. Checks your setup
+2. Picks the best collection method for you
+3. Collects 1000 training examples
+4. Cleans the data
+5. Gives you a Colab notebook to train
+
+Just follow the prompts. 🧪
 
 ```bash
 # Collects from arena.ai, falls back to ChatGPT, Claude, then Ollama
