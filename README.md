@@ -26,11 +26,24 @@ Create a small, fast, private AI model from big models like ChatGPT, Claude, or 
 
 ## 🚀 Quick Start
 
-### Option 1: Manual Chat Mode (Zero Setup)
+### Option 1: Ollama (Free — no API key, multiple models!)
+
+```bash
+# Option A: Ollama Cloud (free tier, many models)
+export OLLAMA_API_KEY="your-key"  # Get from https://ollama.com/settings
+python collect/ollama_collector.py --mode cloud --multi-model
+
+# Option B: Ollama Local (100% free, runs on your machine)
+# First: install Ollama → https://ollama.com/download
+# Then: ollama pull llama3.1:8b
+python collect/ollama_collector.py --mode local --model llama3.1:8b
+```
+
+### Option 2: Manual Chat Mode (Zero Setup — copy-paste from ChatGPT)
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/tiny-distill.git
+git clone https://github.com/r2d2helper1-creator/tiny-distill.git
 cd tiny-distill
 
 # 2. Install dependencies
@@ -75,6 +88,7 @@ python train/train_bitnet.py --data data/my_dataset.jsonl --output models/my-mod
 tiny-distill/
 ├── collect/
 │   ├── manual_collector.py    # Chat-based data collection (no API key)
+│   ├── ollama_collector.py    # Ollama cloud + local collection (FREE!)
 │   ├── api_collector.py       # Automated API collection
 │   ├── prompt_generator.py    # Smart prompt generation
 │   └── cleaner.py             # Data cleaning & deduplication
@@ -129,6 +143,8 @@ tiny-distill/
 | ChatGPT (web) | Manual copy-paste | ⭐⭐⭐⭐⭐ | Free |
 | Claude (web) | Manual copy-paste | ⭐⭐⭐⭐⭐ | Free |
 | Gemini (web) | Manual copy-paste | ⭐⭐⭐⭐ | Free |
+| Ollama Cloud | Automated | ⭐⭐⭐⭐⭐ | Free (token limit) |
+| Ollama Local | Automated | ⭐⭐⭐⭐ | 100% Free |
 | OpenAI API | Automated | ⭐⭐⭐⭐⭐ | ~$0.01/1K prompts |
 | Anthropic API | Automated | ⭐⭐⭐⭐⭐ | ~$0.01/1K prompts |
 | Multiple teachers | Ensemble | ⭐⭐⭐⭐⭐+ | Varies |
@@ -167,6 +183,7 @@ tiny-distill/
 
 - [x] Manual chat collector
 - [x] API-based collector (OpenAI, Anthropic)
+- [x] Ollama collector (cloud + local, free!)
 - [x] Smart prompt generator
 - [x] Data cleaner & deduplicator
 - [x] Training script (BitNet fine-tuning)
