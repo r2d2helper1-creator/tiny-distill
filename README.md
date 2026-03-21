@@ -32,14 +32,17 @@ cd tiny-distill
 bash setup.sh
 ```
 
-**That's it.** The script walks you through everything:
-1. Checks your setup
-2. Picks the best collection method for you
-3. Collects 1000 training examples
-4. Cleans the data
-5. Gives you a Colab notebook to train
+**That's it.** The script walks you through everything — just follow the prompts.
 
-Just follow the prompts. 🧪
+### What You Can Collect From
+
+| Source | Models | Cost |
+|--------|--------|------|
+| 🏟️ **Arena.ai** (recommended) | Claude Opus, GPT-5, Gemini 3, Grok 4, 398+ models | **Free** |
+| 🦙 Ollama | phi3, qwen, llama, gemma | **100% Free** |
+| 🌐 Browser (ChatGPT/Claude) | Any web chat interface | **Free** |
+| 📋 Manual copy-paste | Any chat interface | **Free** |
+| 🔑 API | OpenAI, Anthropic | ~$5 |
 
 ```bash
 # Collects from arena.ai, falls back to ChatGPT, Claude, then Ollama

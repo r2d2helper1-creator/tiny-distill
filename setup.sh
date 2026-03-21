@@ -128,7 +128,11 @@ step "3" "Choose how to collect training data"
 echo -e "  You need to collect 1000 prompt-response pairs from AI models."
 echo -e "  Choose your method:"
 echo ""
-echo -e "  ${BOLD}1)${NC} 🦙 Ollama (recommended)"
+echo -e "  ${BOLD}1)${NC} 🏟️  Arena.ai (BEST — 398+ free models!)"
+echo -e "     ${DIM}Claude Opus, GPT-5, Gemini 3, Grok 4 — all free!${NC}"
+echo -e "     ${DIM}Just needs a browser. Handles rate limits automatically.${NC}"
+echo ""
+echo -e "  ${BOLD}2)${NC} 🦙 Ollama (recommended if no browser)"
 echo -e "     ${DIM}Free. Runs on your computer. No limits. No API keys.${NC}"
 echo -e "     ${DIM}Requires: ~2GB disk space for model download${NC}"
 echo ""
@@ -153,6 +157,63 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 case $METHOD in
     1)
+        # ─── Arena.ai ────────────────────────────────────────────────────
+        step "4" "Collecting from Arena.ai (398+ free models!)"
+        
+        echo ""
+        echo -e "  ${BOLD}Available models:${NC}"
+        echo -e "  ${CYAN}Tier 1 (best quality):${NC}"
+        echo "    1) claude-opus-4-6      (Anthropic #1)"
+        echo "    2) gpt-5.4-high         (OpenAI latest)"
+        echo "    3) gemini-3.1-pro       (Google #3)"
+        echo "    4) grok-4.20-beta       (xAI reasoning)"
+        echo -e "  ${CYAN}Tier 2 (fast + smart):${NC}"
+        echo "    5) claude-sonnet-4-6    (great for coding)"
+        echo "    6) gpt-5.2-chat-latest  (solid all-rounder)"
+        echo "    7) gemini-3-pro         (Google strong)"
+        echo "    8) grok-4.1             (xAI fast)"
+        echo -e "  ${CYAN}Multi-model:${NC}"
+        echo "    9) ALL tier 1 models (best quality + diversity)"
+        echo ""
+        
+        ask "Which model? [1-9]:" MODEL_CHOICE
+        MODEL_CHOICE=${MODEL_CHOICE:-1}
+        
+        case $MODEL_CHOICE in
+            1) MODEL="claude-opus-4-6"; MULTI="" ;;
+            2) MODEL="gpt-5.4-high-no-system-prompt"; MULTI="" ;;
+            3) MODEL="gemini-3.1-pro"; MULTI="" ;;
+            4) MODEL="grok-4.20-beta-0309-reasoning"; MULTI="" ;;
+            5) MODEL="claude-sonnet-4-6"; MULTI="" ;;
+            6) MODEL="gpt-5.2-chat-latest"; MULTI="" ;;
+            7) MODEL="gemini-3-pro"; MULTI="" ;;
+            8) MODEL="grok-4.1"; MULTI="" ;;
+            9) MODEL="claude-opus-4-6"; MULTI="--multi-model --models claude-opus-4-6,gpt-5.2-chat-latest,gemini-3-pro,grok-4.1" ;;
+            *) MODEL="claude-opus-4-6"; MULTI="" ;;
+        esac
+        
+        ask "How many prompts? [1000]:" NUM_PROMPTS
+        NUM_PROMPTS=${NUM_PROMPTS:-1000}
+        
+        echo ""
+        if [ -n "$MULTI" ]; then
+            echo -e "  ${BOLD}Collecting $NUM_PROMPTS prompts from MULTIPLE models${NC}"
+        else
+            echo -e "  ${BOLD}Collecting $NUM_PROMPTS prompts from $MODEL${NC}"
+        fi
+        echo -e "  ${DIM}Browser will open. Handles rate limits automatically.${NC}"
+        echo -e "  ${DIM}You can Ctrl+C anytime — progress is saved.${NC}"
+        echo ""
+        confirm
+        
+        $PYTHON "$SCRIPT_DIR/collect/arena_collector.py" \
+            --model $MODEL \
+            --num-prompts $NUM_PROMPTS \
+            --output "$SCRIPT_DIR/data/raw_dataset.jsonl" \
+            $MULTI
+        ;;
+    
+    2)
         # ─── Ollama ──────────────────────────────────────────────────────
         step "4a" "Setting up Ollama"
         
@@ -166,27 +227,23 @@ case $METHOD in
             echo ""
             
             if [[ "$OSTYPE" == "darwin"* ]]; then
-                # Mac
                 if command -v brew &> /dev/null; then
                     brew install ollama
                 else
                     curl -fsSL https://ollama.com/install.sh | sh
                 fi
             else
-                # Linux
                 curl -fsSL https://ollama.com/install.sh | sh
             fi
             ok "Ollama installed!"
         fi
         
-        # Start Ollama if not running
         if ! ollama list &> /dev/null; then
             info "Starting Ollama server..."
             ollama serve &>/dev/null &
             sleep 3
         fi
         
-        # Choose model
         echo ""
         echo -e "  ${BOLD}Which model?${NC}"
         echo "  1) phi3:3.8b     (2.3GB, best balance)"
@@ -209,18 +266,15 @@ case $METHOD in
         ollama pull $MODEL
         ok "$MODEL ready!"
         
-        # Ask for number of prompts
         ask "How many prompts? [1000]:" NUM_PROMPTS
         NUM_PROMPTS=${NUM_PROMPTS:-1000}
         
-        # Collect
         step "4b" "Collecting data (this takes 1-3 hours)"
         echo ""
         echo -e "  ${BOLD}Collecting $NUM_PROMPTS responses from $MODEL${NC}"
         echo -e "  ${DIM}Estimated time: ~$((NUM_PROMPTS * 5 / 60)) minutes${NC}"
         echo -e "  ${DIM}You can Ctrl+C anytime — progress is saved automatically${NC}"
         echo ""
-        
         confirm
         
         $PYTHON "$SCRIPT_DIR/collect/ollama_collector.py" \
@@ -230,7 +284,7 @@ case $METHOD in
             --output "$SCRIPT_DIR/data/raw_dataset.jsonl"
         ;;
     
-    2)
+    3)
         # ─── Browser Automation ──────────────────────────────────────────
         step "4a" "Setting up browser automation"
         
@@ -272,7 +326,7 @@ case $METHOD in
             --no-headless
         ;;
     
-    3)
+    4)
         # ─── Manual ──────────────────────────────────────────────────────
         step "4" "Manual collection"
         echo ""
@@ -285,7 +339,7 @@ case $METHOD in
         $PYTHON "$SCRIPT_DIR/collect/manual_collector.py"
         ;;
     
-    4)
+    5)
         # ─── API ─────────────────────────────────────────────────────────
         step "4" "API collection"
         
