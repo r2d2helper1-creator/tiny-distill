@@ -26,7 +26,27 @@ Create a small, fast, private AI model from big models like ChatGPT, Claude, or 
 
 ## 🚀 Quick Start
 
-### Option 1: Ollama (Free — no API key, multiple models!)
+### Option 1: Browser Automation (One command, fully automatic!)
+
+```bash
+# Install
+pip install browser-use
+playwright install chromium
+
+# Collect from ChatGPT automatically (no ChatGPT API key needed!)
+python collect/browser_collector.py --provider chatgpt --num-prompts 100
+
+# Collect from Claude
+python collect/browser_collector.py --provider claude --num-prompts 100
+
+# Use FREE Ollama to power the agent (no paid API at all!)
+python collect/browser_collector.py --provider chatgpt --agent-llm ollama
+
+# Multi-provider (collect from all at once!)
+python collect/browser_collector.py --multi-provider --providers chatgpt,claude,gemini
+```
+
+### Option 2: Ollama (Free — no API key, multiple models!)
 
 ```bash
 # Option A: Ollama Cloud (free tier, many models)
@@ -87,6 +107,7 @@ python train/train_bitnet.py --data data/my_dataset.jsonl --output models/my-mod
 ```
 tiny-distill/
 ├── collect/
+│   ├── browser_collector.py  # 🤖 Browser automation (THE MAGIC — fully automatic!)
 │   ├── manual_collector.py    # Chat-based data collection (no API key)
 │   ├── ollama_collector.py    # Ollama cloud + local collection (FREE!)
 │   ├── api_collector.py       # Automated API collection
@@ -143,6 +164,9 @@ tiny-distill/
 | ChatGPT (web) | Manual copy-paste | ⭐⭐⭐⭐⭐ | Free |
 | Claude (web) | Manual copy-paste | ⭐⭐⭐⭐⭐ | Free |
 | Gemini (web) | Manual copy-paste | ⭐⭐⭐⭐ | Free |
+| ChatGPT (auto) | Browser automation | ⭐⭐⭐⭐⭐ | Free |
+| Claude (auto) | Browser automation | ⭐⭐⭐⭐⭐ | Free |
+| Gemini (auto) | Browser automation | ⭐⭐⭐⭐ | Free |
 | Ollama Cloud | Automated | ⭐⭐⭐⭐⭐ | Free (token limit) |
 | Ollama Local | Automated | ⭐⭐⭐⭐ | 100% Free |
 | OpenAI API | Automated | ⭐⭐⭐⭐⭐ | ~$0.01/1K prompts |
@@ -182,6 +206,7 @@ tiny-distill/
 ## 🗺️ Roadmap
 
 - [x] Manual chat collector
+- [x] Browser automation collector (browser-use, fully automatic!)
 - [x] API-based collector (OpenAI, Anthropic)
 - [x] Ollama collector (cloud + local, free!)
 - [x] Smart prompt generator
@@ -189,7 +214,7 @@ tiny-distill/
 - [x] Training script (BitNet fine-tuning)
 - [x] Google Colab notebook
 - [x] Kaggle notebook
-- [ ] Multi-teacher knowledge purification
+- [ ] Multi-teacher knowledge purification (advanced scoring)
 - [ ] Web UI for easier collection
 - [ ] One-click deploy to Hugging Face
 - [ ] Mobile-friendly collection (chat on phone!)
