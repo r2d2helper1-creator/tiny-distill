@@ -1,0 +1,9 @@
+-e __pycache__/
+*.pyc
+data/*.jsonl
+!data/example_prompts.json
+!data/prompts_1000.json
+models/
+*.json
+!data/*.json
+!notebooks/*.ipynb
