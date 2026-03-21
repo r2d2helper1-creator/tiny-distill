@@ -62,6 +62,8 @@ confirm() {
 
 # ─── Main ────────────────────────────────────────────────────────────────────
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 banner
 
 echo -e "  ${DIM}This script will help you:${NC}"
@@ -115,11 +117,56 @@ ok "Package manager: $PIP"
 
 # ─── Step 2: Install dependencies ───────────────────────────────────────────
 
-step "2" "Installing dependencies"
+step "2" "Setting up Python environment"
 
-info "Installing requests..."
-$PIP install requests --quiet 2>/dev/null || $PYTHON -m pip install requests --quiet
-ok "requests installed"
+# Create virtual environment to avoid PEP 668 issues
+VENV_DIR="$SCRIPT_DIR/.venv"
+
+if [ -d "$VENV_DIR" ]; then
+    ok "Virtual environment already exists"
+else
+    info "Creating virtual environment..."
+    $PYTHON -m venv "$VENV_DIR" 2>/dev/null || {
+        # Fallback: try with --system-site-packages
+        $PYTHON -m venv --system-site-packages "$VENV_DIR" 2>/dev/null || {
+            # Last resort: use --break-system-packages
+            warn "Could not create venv, will use --break-system-packages"
+            VENV_DIR=""
+        }
+    }
+    if [ -n "$VENV_DIR" ]; then
+        ok "Virtual environment created"
+    fi
+fi
+
+# Activate venv or set up system fallback
+if [ -n "$VENV_DIR" ] && [ -d "$VENV_DIR" ]; then
+    source "$VENV_DIR/bin/activate"
+    PYTHON="$VENV_DIR/bin/python"
+    PIP="$VENV_DIR/bin/pip"
+    ok "Virtual environment activated"
+    
+    info "Installing requests..."
+    $PIP install requests --quiet
+    ok "requests installed"
+else
+    # No venv — try system install with fallbacks
+    info "Installing requests..."
+    if $PIP install requests --quiet 2>/dev/null; then
+        ok "requests installed"
+    elif $PIP install --break-system-packages requests --quiet 2>/dev/null; then
+        ok "requests installed (--break-system-packages)"
+    elif $PYTHON -m pip install --break-system-packages requests --quiet 2>/dev/null; then
+        ok "requests installed (--break-system-packages)"
+    else
+        # Try apt
+        apt-get install -y python3-requests 2>/dev/null && ok "requests installed via apt" || {
+            fail "Could not install requests"
+            echo "  Try manually: pip3 install --break-system-packages requests"
+            exit 1
+        }
+    fi
+fi
 
 # ─── Step 3: Choose collection method ───────────────────────────────────────
 
@@ -152,8 +199,6 @@ ask "Which method? [1-5]:" METHOD
 METHOD=${METHOD:-1}
 
 # ─── Step 4: Set up collection ───────────────────────────────────────────────
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 case $METHOD in
     1)
