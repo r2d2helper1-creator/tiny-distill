@@ -203,7 +203,15 @@ METHOD=${METHOD:-1}
 case $METHOD in
     1)
         # ─── Arena.ai ────────────────────────────────────────────────────
-        step "4" "Collecting from Arena.ai (398+ free models!)"
+        step "4a" "Installing browser tools for Arena.ai"
+        
+        info "Installing playwright..."
+        $PIP install playwright 2>/dev/null || $PYTHON -m pip install --break-system-packages playwright 2>/dev/null
+        info "Installing Chromium browser..."
+        $PYTHON -m playwright install chromium 2>/dev/null || $PYTHON -m playwright install --with-deps chromium 2>/dev/null
+        ok "Browser tools ready!"
+        
+        step "4b" "Collecting from Arena.ai (398+ free models!)"
         
         echo ""
         echo -e "  ${BOLD}Available models:${NC}"

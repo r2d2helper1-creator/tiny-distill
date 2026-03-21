@@ -7,3 +7,4 @@ models/
 *.json
 !data/*.json
 !notebooks/*.ipynb
+.venv/
