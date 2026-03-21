@@ -3,12 +3,12 @@
 # 🧪 tiny-distill — One Command to Rule Them All
 # 
 # This script walks you through creating your own AI model.
-# No experience needed. Just run it and follow along.
+# No experience needed. No pre-installed dependencies assumed.
 #
 # Usage:
-#   curl -sSL https://tiny-distill.com/setup.sh | bash
-#   OR
-#   git clone https://github.com/r2d2helper1-creator/tiny-distill.git && cd tiny-distill && bash setup.sh
+#   git clone https://github.com/r2d2helper1-creator/tiny-distill.git
+#   cd tiny-distill
+#   bash setup.sh
 # ═══════════════════════════════════════════════════════════════════════════
 
 set -e
@@ -25,6 +25,8 @@ DIM='\033[2m'
 NC='\033[0m'
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 banner() {
     echo ""
@@ -60,17 +62,57 @@ confirm() {
     read -p "  Press Enter to continue..." dummy
 }
 
+# Detect OS
+detect_os() {
+    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        if [ -f /etc/debian_version ]; then
+            OS="debian"
+        elif [ -f /etc/redhat-release ]; then
+            OS="redhat"
+        else
+            OS="linux"
+        fi
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        OS="mac"
+    else
+        OS="unknown"
+    fi
+}
+
+# Install system package (cross-platform)
+install_system_pkg() {
+    local pkg_debian="$1"
+    local pkg_redhat="$2"
+    local pkg_mac="$3"
+    
+    case $OS in
+        debian)
+            apt-get install -y $pkg_debian 2>/dev/null
+            ;;
+        redhat)
+            yum install -y $pkg_redhat 2>/dev/null
+            ;;
+        mac)
+            if command -v brew &> /dev/null; then
+                brew install $pkg_mac 2>/dev/null
+            fi
+            ;;
+    esac
+}
+
 # ─── Main ────────────────────────────────────────────────────────────────────
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 banner
+detect_os
 
-echo -e "  ${DIM}This script will help you:${NC}"
-echo -e "  ${DIM}  1. Set up data collection${NC}"
-echo -e "  ${DIM}  2. Collect 1000 prompt-response pairs${NC}"
-echo -e "  ${DIM}  3. Clean the data${NC}"
-echo -e "  ${DIM}  4. Give you a Colab notebook to train your model${NC}"
+echo -e "  ${DIM}Detected OS: $OS${NC}"
+echo ""
+echo -e "  ${DIM}This script will:${NC}"
+echo -e "  ${DIM}  1. Install all system dependencies${NC}"
+echo -e "  ${DIM}  2. Set up Python environment${NC}"
+echo -e "  ${DIM}  3. Collect 1000 training examples${NC}"
+echo -e "  ${DIM}  4. Clean the data${NC}"
+echo -e "  ${DIM}  5. Give you a Colab notebook to train${NC}"
 echo ""
 echo -e "  ${DIM}Total time: 30 min to 3 hours (depends on method)${NC}"
 echo -e "  ${DIM}Cost: \$0 (everything is free)${NC}"
@@ -78,97 +120,129 @@ echo ""
 
 confirm
 
-# ─── Step 1: Check Python ────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# Step 1: Install system dependencies
+# ══════════════════════════════════════════════════════════════════════════════
 
-step "1" "Checking your setup"
+step "1" "Installing system dependencies"
 
-PYTHON=""
-if command -v python3 &> /dev/null; then
-    PYTHON="python3"
-    ok "Python 3 found: $(python3 --version)"
-elif command -v python &> /dev/null; then
-    PYTHON="python"
-    ok "Python found: $(python --version)"
-else
-    fail "Python not found!"
-    echo ""
-    echo "  Install Python 3.8+ first:"
-    echo "    Mac:    brew install python3"
-    echo "    Ubuntu: sudo apt install python3 python3-pip"
-    echo "    Windows: https://python.org/downloads"
-    exit 1
+info "Updating package lists..."
+case $OS in
+    debian)
+        apt-get update -qq 2>/dev/null || true
+        ;;
+    redhat)
+        yum makecache 2>/dev/null || true
+        ;;
+esac
+
+# Check and install Python
+if ! command -v python3 &> /dev/null; then
+    info "Installing Python 3..."
+    install_system_pkg "python3 python3-venv python3-pip" "python3 python3-pip" "python3"
 fi
 
-# Check pip
-PIP=""
-if command -v pip3 &> /dev/null; then
-    PIP="pip3"
-elif command -v pip &> /dev/null; then
-    PIP="pip"
-elif $PYTHON -m pip --version &> /dev/null; then
-    PIP="$PYTHON -m pip"
-else
-    warn "pip not found — will try to install"
-    $PYTHON -m ensurepip 2>/dev/null || true
-    PIP="$PYTHON -m pip"
+PYTHON="python3"
+ok "Python: $($PYTHON --version 2>&1)"
+
+# Check and install curl (needed for Ollama)
+if ! command -v curl &> /dev/null; then
+    info "Installing curl..."
+    install_system_pkg "curl" "curl" "curl"
 fi
+ok "curl: $(curl --version 2>&1 | head -1)"
 
-ok "Package manager: $PIP"
+# Check and install git (needed for cloning)
+if ! command -v git &> /dev/null; then
+    info "Installing git..."
+    install_system_pkg "git" "git" "git"
+fi
+ok "git: $(git --version 2>&1)"
 
-# ─── Step 2: Install dependencies ───────────────────────────────────────────
+# ─── Chromium system dependencies (for Playwright browser automation) ───────
+
+info "Installing browser dependencies..."
+
+case $OS in
+    debian)
+        # All Chromium/Playwright system deps for Debian/Ubuntu
+        apt-get install -y -qq \
+            libnss3 \
+            libatk1.0-0 \
+            libatk-bridge2.0-0 \
+            libcups2 \
+            libdrm2 \
+            libxkbcommon0 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxrandr2 \
+            libgbm1 \
+            libpango-1.0-0 \
+            libcairo2 \
+            libasound2 \
+            libxshmfence1 \
+            libx11-xcb1 \
+            fonts-liberation \
+            libappindicator3-1 \
+            libnspr4 \
+            libxss1 \
+            libgconf-2-4 \
+            xdg-utils \
+            wget \
+            2>/dev/null || true
+        ;;
+    redhat)
+        yum install -y \
+            nss atk at-spi2-atk cups-libs libdrm libxkbcommon \
+            libxcomposite libxdamage libxrandr mesa-libgbm pango \
+            cairo alsa-lib libX11-xcb liberation-fonts \
+            libappindicator-gtk3 nspr libXScrnSaver xdg-utils wget \
+            2>/dev/null || true
+        ;;
+    mac)
+        # macOS doesn't need these — Chromium comes bundled
+        true
+        ;;
+esac
+
+ok "System dependencies installed"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Step 2: Set up Python environment
+# ══════════════════════════════════════════════════════════════════════════════
 
 step "2" "Setting up Python environment"
 
-# Create virtual environment to avoid PEP 668 issues
+# Create virtual environment
 VENV_DIR="$SCRIPT_DIR/.venv"
 
 if [ -d "$VENV_DIR" ]; then
     ok "Virtual environment already exists"
 else
     info "Creating virtual environment..."
-    $PYTHON -m venv "$VENV_DIR" 2>/dev/null || {
-        # Fallback: try with --system-site-packages
-        $PYTHON -m venv --system-site-packages "$VENV_DIR" 2>/dev/null || {
-            # Last resort: use --break-system-packages
-            warn "Could not create venv, will use --break-system-packages"
-            VENV_DIR=""
-        }
-    }
-    if [ -n "$VENV_DIR" ]; then
-        ok "Virtual environment created"
-    fi
+    $PYTHON -m venv "$VENV_DIR"
+    ok "Virtual environment created"
 fi
 
-# Activate venv or set up system fallback
-if [ -n "$VENV_DIR" ] && [ -d "$VENV_DIR" ]; then
-    source "$VENV_DIR/bin/activate"
-    PYTHON="$VENV_DIR/bin/python"
-    PIP="$VENV_DIR/bin/pip"
-    ok "Virtual environment activated"
-    
-    info "Installing requests..."
-    $PIP install requests --quiet
-    ok "requests installed"
-else
-    # No venv — try system install with fallbacks
-    info "Installing requests..."
-    if $PIP install requests --quiet 2>/dev/null; then
-        ok "requests installed"
-    elif $PIP install --break-system-packages requests --quiet 2>/dev/null; then
-        ok "requests installed (--break-system-packages)"
-    elif $PYTHON -m pip install --break-system-packages requests --quiet 2>/dev/null; then
-        ok "requests installed (--break-system-packages)"
-    else
-        # Try apt
-        apt-get install -y python3-requests 2>/dev/null && ok "requests installed via apt" || {
-            fail "Could not install requests"
-            echo "  Try manually: pip3 install --break-system-packages requests"
-            exit 1
-        }
-    fi
-fi
+# Activate venv
+source "$VENV_DIR/bin/activate"
+PYTHON="$VENV_DIR/bin/python"
+PIP="$VENV_DIR/bin/pip"
+ok "Virtual environment activated"
 
-# ─── Step 3: Choose collection method ───────────────────────────────────────
+# Upgrade pip
+info "Upgrading pip..."
+$PIP install --upgrade pip --quiet 2>/dev/null
+
+# Install core dependencies
+info "Installing Python packages..."
+$PIP install --quiet requests
+
+ok "Python environment ready"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Step 3: Choose collection method
+# ══════════════════════════════════════════════════════════════════════════════
 
 step "3" "Choose how to collect training data"
 
@@ -179,37 +253,52 @@ echo -e "  ${BOLD}1)${NC} 🏟️  Arena.ai (BEST — 398+ free models!)"
 echo -e "     ${DIM}Claude Opus, GPT-5, Gemini 3, Grok 4 — all free!${NC}"
 echo -e "     ${DIM}Just needs a browser. Handles rate limits automatically.${NC}"
 echo ""
-echo -e "  ${BOLD}2)${NC} 🦙 Ollama (recommended if no browser)"
-echo -e "     ${DIM}Free. Runs on your computer. No limits. No API keys.${NC}"
-echo -e "     ${DIM}Requires: ~2GB disk space for model download${NC}"
-echo ""
-echo -e "  ${BOLD}2)${NC} 🌐 Browser Automation"
-echo -e "     ${DIM}Goes to ChatGPT/Claude website, collects automatically.${NC}"
-echo -e "     ${DIM}Requires: Chromium browser, logged into ChatGPT/Claude${NC}"
+echo -e "  ${BOLD}2)${NC} 🦙 Ollama (runs on your computer)"
+echo -e "     ${DIM}Free. No limits. No API keys. Downloads a small model.${NC}"
 echo ""
 echo -e "  ${BOLD}3)${NC} 📋 Manual Copy-Paste"
 echo -e "     ${DIM}Shows you prompts, you paste into ChatGPT, paste back.${NC}"
 echo -e "     ${DIM}No install needed. Takes ~2 hours.${NC}"
 echo ""
-echo -e "  ${BOLD}4)${NC} 🔑 API (fastest, costs money)"
-echo -e "     ${DIM}Uses OpenAI/Anthropic API. ~$5 for 1000 prompts.${NC}"
-echo ""
 
-ask "Which method? [1-5]:" METHOD
+ask "Which method? [1-3]:" METHOD
 METHOD=${METHOD:-1}
 
-# ─── Step 4: Set up collection ───────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# Step 4: Set up and run collection
+# ══════════════════════════════════════════════════════════════════════════════
 
 case $METHOD in
+
+    # ─────────────────────────────────────────────────────────────────────
+    # Option 1: Arena.ai
+    # ─────────────────────────────────────────────────────────────────────
     1)
-        # ─── Arena.ai ────────────────────────────────────────────────────
-        step "4a" "Installing browser tools for Arena.ai"
+        step "4a" "Installing Playwright + Chromium"
         
-        info "Installing playwright..."
-        $PIP install playwright 2>/dev/null || $PYTHON -m pip install --break-system-packages playwright 2>/dev/null
-        info "Installing Chromium browser..."
-        $PYTHON -m playwright install chromium 2>/dev/null || $PYTHON -m playwright install --with-deps chromium 2>/dev/null
-        ok "Browser tools ready!"
+        info "Installing playwright (Python package)..."
+        $PIP install --quiet playwright
+        
+        info "Downloading Chromium browser (this may take a minute)..."
+        $PYTHON -m playwright install --with-deps chromium 2>/dev/null || {
+            warn "playwright install --with-deps failed, trying without deps..."
+            $PYTHON -m playwright install chromium 2>/dev/null || {
+                warn "Automatic Chromium install failed."
+                info "Trying to install Chromium system package instead..."
+                install_system_pkg "chromium-browser" "chromium" ""
+                $PYTHON -m playwright install chromium 2>/dev/null || true
+            }
+        }
+        
+        # Verify playwright works
+        $PYTHON -c "from playwright.async_api import async_playwright; print('OK')" 2>/dev/null && \
+            ok "Playwright + Chromium ready!" || {
+            fail "Playwright setup failed"
+            echo "  Try manually:"
+            echo "    pip install playwright"
+            echo "    playwright install --with-deps chromium"
+            exit 1
+        }
         
         step "4b" "Collecting from Arena.ai (398+ free models!)"
         
@@ -265,36 +354,26 @@ case $METHOD in
             --output "$SCRIPT_DIR/data/raw_dataset.jsonl" \
             $MULTI
         ;;
-    
+
+    # ─────────────────────────────────────────────────────────────────────
+    # Option 2: Ollama
+    # ─────────────────────────────────────────────────────────────────────
     2)
-        # ─── Ollama ──────────────────────────────────────────────────────
         step "4a" "Setting up Ollama"
         
         if command -v ollama &> /dev/null; then
             ok "Ollama already installed!"
         else
-            info "Installing Ollama..."
-            echo ""
-            echo -e "  ${DIM}This will download Ollama from https://ollama.com${NC}"
-            echo -e "  ${DIM}If you prefer, install manually from https://ollama.com/download${NC}"
-            echo ""
-            
-            if [[ "$OSTYPE" == "darwin"* ]]; then
-                if command -v brew &> /dev/null; then
-                    brew install ollama
-                else
-                    curl -fsSL https://ollama.com/install.sh | sh
-                fi
-            else
-                curl -fsSL https://ollama.com/install.sh | sh
-            fi
+            info "Downloading and installing Ollama..."
+            curl -fsSL https://ollama.com/install.sh | sh
             ok "Ollama installed!"
         fi
         
-        if ! ollama list &> /dev/null; then
+        # Start Ollama server if not running
+        if ! ollama list &> /dev/null 2>&1; then
             info "Starting Ollama server..."
             ollama serve &>/dev/null &
-            sleep 3
+            sleep 5
         fi
         
         echo ""
@@ -315,7 +394,7 @@ case $METHOD in
             *) MODEL="phi3:3.8b" ;;
         esac
         
-        info "Pulling $MODEL (this may take a few minutes)..."
+        info "Downloading $MODEL (this may take a few minutes)..."
         ollama pull $MODEL
         ok "$MODEL ready!"
         
@@ -325,8 +404,7 @@ case $METHOD in
         step "4b" "Collecting data (this takes 1-3 hours)"
         echo ""
         echo -e "  ${BOLD}Collecting $NUM_PROMPTS responses from $MODEL${NC}"
-        echo -e "  ${DIM}Estimated time: ~$((NUM_PROMPTS * 5 / 60)) minutes${NC}"
-        echo -e "  ${DIM}You can Ctrl+C anytime — progress is saved automatically${NC}"
+        echo -e "  ${DIM}You can Ctrl+C anytime — progress is saved.${NC}"
         echo ""
         confirm
         
@@ -336,51 +414,11 @@ case $METHOD in
             --num-prompts $NUM_PROMPTS \
             --output "$SCRIPT_DIR/data/raw_dataset.jsonl"
         ;;
-    
+
+    # ─────────────────────────────────────────────────────────────────────
+    # Option 3: Manual
+    # ─────────────────────────────────────────────────────────────────────
     3)
-        # ─── Browser Automation ──────────────────────────────────────────
-        step "4a" "Setting up browser automation"
-        
-        info "Installing browser-use and Playwright..."
-        $PIP install browser-use --quiet 2>/dev/null || $PYTHON -m pip install browser-use --quiet
-        
-        if ! command -v playwright &> /dev/null; then
-            $PYTHON -m playwright install chromium 2>/dev/null || {
-                warn "Playwright install had issues. Trying anyway..."
-            }
-        fi
-        ok "Browser tools ready!"
-        
-        echo ""
-        echo -e "  ${BOLD}Which website?${NC}"
-        echo "  1) ChatGPT (chat.openai.com)"
-        echo "  2) Claude (claude.ai)"
-        echo "  3) Gemini (gemini.google.com)"
-        
-        ask "Website [1]:" SITE_CHOICE
-        SITE_CHOICE=${SITE_CHOICE:-1}
-        
-        case $SITE_CHOICE in
-            1) PROVIDER="chatgpt" ;;
-            2) PROVIDER="claude" ;;
-            3) PROVIDER="gemini" ;;
-            *) PROVIDER="chatgpt" ;;
-        esac
-        
-        echo ""
-        warn "Make sure you're logged into $PROVIDER in your browser!"
-        confirm
-        
-        step "4b" "Collecting data via browser"
-        
-        $PYTHON "$SCRIPT_DIR/collect/browser_collector.py" \
-            --provider $PROVIDER \
-            --num-prompts 1000 \
-            --no-headless
-        ;;
-    
-    4)
-        # ─── Manual ──────────────────────────────────────────────────────
         step "4" "Manual collection"
         echo ""
         echo -e "  The collector will show you prompts one by one."
@@ -391,54 +429,16 @@ case $METHOD in
         
         $PYTHON "$SCRIPT_DIR/collect/manual_collector.py"
         ;;
-    
-    5)
-        # ─── API ─────────────────────────────────────────────────────────
-        step "4" "API collection"
-        
-        echo ""
-        echo -e "  ${BOLD}Which API?${NC}"
-        echo "  1) OpenAI (GPT-4o-mini, cheapest)"
-        echo "  2) Anthropic (Claude)"
-        
-        ask "API [1]:" API_CHOICE
-        API_CHOICE=${API_CHOICE:-1}
-        
-        case $API_CHOICE in
-            1)
-                PROVIDER="openai"
-                ENV_KEY="OPENAI_API_KEY"
-                ;;
-            2)
-                PROVIDER="anthropic"
-                ENV_KEY="ANTHROPIC_API_KEY"
-                ;;
-            *)
-                PROVIDER="openai"
-                ENV_KEY="OPENAI_API_KEY"
-                ;;
-        esac
-        
-        if [ -z "${!ENV_KEY}" ]; then
-            ask "Enter your $ENV_KEY:" API_KEY
-            export $ENV_KEY="$API_KEY"
-        fi
-        
-        info "Estimated cost: ~\$5 for 1000 prompts"
-        confirm
-        
-        $PYTHON "$SCRIPT_DIR/collect/api_collector.py" \
-            --provider $PROVIDER \
-            --num-prompts 1000
-        ;;
-    
+
     *)
         fail "Invalid choice"
         exit 1
         ;;
 esac
 
-# ─── Step 5: Clean data ─────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# Step 5: Clean data
+# ══════════════════════════════════════════════════════════════════════════════
 
 step "5" "Cleaning your data"
 
@@ -446,11 +446,12 @@ $PYTHON "$SCRIPT_DIR/collect/cleaner.py" \
     --input-dir "$SCRIPT_DIR/data/" \
     --output "$SCRIPT_DIR/data/cleaned_dataset.jsonl"
 
-# Count entries
 ENTRY_COUNT=$(wc -l < "$SCRIPT_DIR/data/cleaned_dataset.jsonl" 2>/dev/null || echo "0")
 ok "Cleaned dataset: $ENTRY_COUNT examples"
 
-# ─── Step 6: Done! ──────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+# Step 6: Done!
+# ══════════════════════════════════════════════════════════════════════════════
 
 step "6" "You're ready to train! 🎉"
 
@@ -483,6 +484,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     fi
 fi
 
-echo -e "  ${DIM}Questions? Issues? → https://github.com/r2d2helper1-creator/tiny-distill/issues${NC}"
+echo -e "  ${DIM}Questions? → https://github.com/r2d2helper1-creator/tiny-distill/issues${NC}"
 echo -e "  ${DIM}Happy distilling! 🧪${NC}"
 echo ""
