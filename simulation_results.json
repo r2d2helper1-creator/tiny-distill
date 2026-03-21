@@ -1,0 +1,100 @@
+[
+  {
+    "prompts": 10,
+    "tokens": 5000,
+    "scratch_quality": 0,
+    "distill_quality": 85.0,
+    "api_cost_usd": 0.05
+  },
+  {
+    "prompts": 50,
+    "tokens": 25000,
+    "scratch_quality": 0,
+    "distill_quality": 85.1,
+    "api_cost_usd": 0.25
+  },
+  {
+    "prompts": 100,
+    "tokens": 50000,
+    "scratch_quality": 0,
+    "distill_quality": 85.3,
+    "api_cost_usd": 0.5
+  },
+  {
+    "prompts": 250,
+    "tokens": 125000,
+    "scratch_quality": 0,
+    "distill_quality": 85.8,
+    "api_cost_usd": 1.25
+  },
+  {
+    "prompts": 500,
+    "tokens": 250000,
+    "scratch_quality": 0,
+    "distill_quality": 86.8,
+    "api_cost_usd": 2.5
+  },
+  {
+    "prompts": 1000,
+    "tokens": 500000,
+    "scratch_quality": 0,
+    "distill_quality": 88.5,
+    "api_cost_usd": 5.0
+  },
+  {
+    "prompts": 2500,
+    "tokens": 1250000,
+    "scratch_quality": 0,
+    "distill_quality": 92.3,
+    "api_cost_usd": 12.5
+  },
+  {
+    "prompts": 5000,
+    "tokens": 2500000,
+    "scratch_quality": 0,
+    "distill_quality": 95.2,
+    "api_cost_usd": 25.0
+  },
+  {
+    "prompts": 10000,
+    "tokens": 5000000,
+    "scratch_quality": 0,
+    "distill_quality": 96.9,
+    "api_cost_usd": 50.0
+  },
+  {
+    "prompts": 25000,
+    "tokens": 12500000,
+    "scratch_quality": 0,
+    "distill_quality": 98.2,
+    "api_cost_usd": 125.0
+  },
+  {
+    "prompts": 50000,
+    "tokens": 25000000,
+    "scratch_quality": 0,
+    "distill_quality": 99.1,
+    "api_cost_usd": 250.0
+  },
+  {
+    "prompts": 100000,
+    "tokens": 50000000,
+    "scratch_quality": 0,
+    "distill_quality": 99.5,
+    "api_cost_usd": 500.0
+  },
+  {
+    "prompts": 500000,
+    "tokens": 250000000,
+    "scratch_quality": 11.7,
+    "distill_quality": 99.5,
+    "api_cost_usd": 2500.0
+  },
+  {
+    "prompts": 1000000,
+    "tokens": 500000000,
+    "scratch_quality": 26.5,
+    "distill_quality": 99.5,
+    "api_cost_usd": 5000.0
+  }
+]

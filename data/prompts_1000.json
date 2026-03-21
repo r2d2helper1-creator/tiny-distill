@@ -1,0 +1,4002 @@
+[
+  {
+    "prompt": "Write a romance story about a robot learning emotions in stream of consciousness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a JavaScript class that implements strategy pattern.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the difference between genotypes and meiosis?",
+    "domain": "science"
+  },
+  {
+    "prompt": "A company is facing a PR crisis. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs decentralization for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "If information wants to be free, what can we conclude about price changes?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain CRISPR like I'm my grandmother.",
+    "domain": "science"
+  },
+  {
+    "prompt": "You're advising a school principal. What factors would you consider for technology adoption?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Debug this JavaScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a Go API for shopping cart.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Java function to connecting to a database.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a TypeScript function to implementing a cache.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of speed vs quality for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How does nuclear fusion work at the cellular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the history of X-rays and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain blockchain to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against universal basic income?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Describe a bustling marketplace using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Design a JavaScript API for user authentication.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a top 10 list of the water cycle.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the water cycle to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to be more productive. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does evolution work at the quantum level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Design a C++ API for file upload.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a mystery story about a robot learning emotions in modern casual.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a haiku about artificial intelligence.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a TypeScript function to reading a file.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Rust function to parsing JSON.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against universal basic income?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain how vaccines work to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to improve communication. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the time complexity of BFS and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "If all swans are white, what can we conclude about whether a black swan exists?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write an opening paragraph for a romance novel set in a cyberpunk megacity.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a dialogue between an AI assistant and a medieval knight about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a comparison table of the stock market.",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does memory formation work at the quantum level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Design a JavaScript API for task scheduler.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a dialogue between a time traveler and a cat about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a Rust function to finding duplicates.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs using third-party tools for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a pros and cons list of supply and demand.",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a highly regulated industry?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain compound interest to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Why is gravity important for medicine?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Java function to rate limiting.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "If information wants to be free, what can we conclude about whether a black swan exists?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare tuples vs interfaces in C++. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How does memory formation work at the quantum level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How does nuclear fusion work at the quantum level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a mystery story about the last tree on Earth in Hemingway's style.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "If all swans are white, what can we conclude about privacy implications?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Describe a rainy city at night using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write an opening paragraph for a horror novel set in a cyberpunk megacity.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain what this TypeScript code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would happen if we could see UV light?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs using third-party tools for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a thriller story about a library that contains all possible books in modern casual.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Refactor this code to be more modular: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain DNA replication like I'm 5 years old.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a comparison table of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a step-by-step guide of the water cycle.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain why ice floats on water happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a limerick about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against nuclear energy?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against universal basic income?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against open source software?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a free verse about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Design a Rust API for file upload.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a Java API for user authentication.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain what this Rust code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "A company is facing a PR crisis. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a comparison table of blockchain.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Refactor this code to be more type-safe: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Debug this Go code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain how search engines work to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of learning a new language?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Refactor this code to be more readable: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would happen if gravity stopped working for 5 seconds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a Java function to rate limiting.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the stock market to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Debug this JavaScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for space exploration?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What would happen if humans could photosynthesize?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Refactor this code to be more type-safe: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Why is natural selection important for agriculture?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the best way to be more productive?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does protein folding work at the molecular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "How would you handle timeout errors in Rust?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "I'm trying to save money. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a top 10 list of how search engines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the time complexity of merge sort and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Go function to reversing a linked list.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain what this Rust code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain CRISPR like I'm a high school student.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs quality for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for hiring strategy?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Describe the surface of Mars using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "A company is facing a PR crisis. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Debug this C++ code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to be more productive?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of learning a new language?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs quality for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write an opening paragraph for a horror novel set in a space station.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How would you negotiate a salary in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a sonnet about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain what this C++ code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain what this Java code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would Einstein say about social media?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a checklist of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Think step by step: the prisoner's dilemma",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a sonnet about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What are the pros and cons of remote work?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain why prices keep rising happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Design a TypeScript API for file upload.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the difference between genotypes and phenotypes?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the best way to save money?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs quality for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you handle race conditions in Python?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Refactor this code to be more readable: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a checklist of compound interest.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to be more productive. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the history of penicillin and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a dialogue between a time traveler and a teenager about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "You're advising a hospital director. What factors would you consider for budget allocation?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a Python function to reading a file.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "If information wants to be free, what can we conclude about whether a black swan exists?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Think step by step: the prisoner's dilemma",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a horror story about the last tree on Earth in noir detective style.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "If all swans are white, what can we conclude about whether a black swan exists?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against AI regulation?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you plan a trip on a budget in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare generators vs iterators in C++. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain supply and demand to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a JavaScript function to pagination.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Rust function to parsing JSON.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: more data always helps",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why birds migrate happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you negotiate a salary in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of speed vs quality for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you handle invalid input in JavaScript?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare generators vs iterators in JavaScript. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "If demand exceeds supply, what can we conclude about price changes?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write an opening paragraph for a sci-fi novel set in a cyberpunk megacity.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a thriller story about a library that contains all possible books in noir detective style.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How would you handle race conditions in Java?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: AI will replace all jobs",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Debug this Go code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a dialogue between an AI assistant and a teenager about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What's the difference between chemical bonds and phenotypes?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What would happen if we could see UV light?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the best way to learn to code?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain why prices keep rising happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a top 10 list of the stock market.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a Python function to pagination.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a sci-fi novel set in a space station.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a Python class that implements factory pattern.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you handle timeout errors in Java?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the time complexity of binary search and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a fantasy novel set in a space station.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Debug this C++ code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you handle memory limits in Java?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a free verse about artificial intelligence.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write an opening paragraph for a fantasy novel set in a small fishing village.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain the water cycle to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you plan a trip on a budget in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a fantasy story about a library that contains all possible books in Shakespearean English.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for agriculture?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain why prices keep rising happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the best way to be more productive?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this Rust code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain how search engines work to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Debug this TypeScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the difference between chemical bonds and physical bonds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the history of radio waves and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a limerick about artificial intelligence.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How would you organize a team effectively in a big city?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain supply and demand to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of learning a new language?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of social media?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this Go code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the difference between chemical bonds and phenotypes?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Compare generators vs arrays in TypeScript. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a dialogue between an AI assistant and a teenager about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a medieval knight about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a teenager about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How does evolution work at the molecular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What would happen if we could see UV light?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain supply and demand to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does protein folding work at the molecular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the pros and cons of learning a new language?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does protein folding work at the cellular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: correlation implies causation",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "A company is facing regulatory changes. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: correlation implies causation",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain dark matter like I'm an alien visitor.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "I'm trying to save money. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a Rust class that implements singleton.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "If demand exceeds supply, what can we conclude about privacy implications?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs using third-party tools for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare generators vs interfaces in JavaScript. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "You're advising a CEO. What factors would you consider for technology adoption?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against universal basic income?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Design a Go API for user authentication.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a comparison table of compound interest.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would Shakespeare say about streaming services?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What's the difference between genotypes and meiosis?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: the Monty Hall problem",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the stock market to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for agriculture?",
+    "domain": "science"
+  },
+  {
+    "prompt": "How would you handle memory limits in Java?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the time complexity of quicksort and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain why ice floats on water happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would happen if the sun disappeared?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Compare generators vs interfaces in TypeScript. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the history of X-rays and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a comparison table of compound interest.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a thriller story about a world where dreams are currency in modern casual.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How would you negotiate a salary in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would happen if gravity stopped working for 5 seconds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the time complexity of A* search and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a romance novel set in Victorian London.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Debug this TypeScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a sci-fi novel set in a space station.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Design a Rust API for user authentication.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare classes vs sets in Java. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs quality for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a big city?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Refactor this code to be more efficient: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would Einstein say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "A company is facing a PR crisis. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare async/await vs interfaces in TypeScript. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Refactor this code to be more efficient: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Describe the surface of Mars using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a top 10 list of compound interest.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this Java code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Think step by step: the Monty Hall problem",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain dark matter like I'm an alien visitor.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: the prisoner's dilemma",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Debug this C++ code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "If demand exceeds supply, what can we conclude about privacy implications?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a haiku about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How does evolution work at the cellular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: AI will replace all jobs",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why prices keep rising happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does nuclear fusion work at the cellular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the best way to improve communication?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the best way to start a business?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a cat about the ocean.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a JavaScript function to retry logic.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a C++ API for file upload.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How does protein folding work at the atomic level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What's the best way to save money?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a TypeScript function to rate limiting.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you handle race conditions in Go?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for space exploration?",
+    "domain": "science"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for policy change?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "You're advising a CEO. What factors would you consider for policy change?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to save money. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a Go class that implements dependency injection.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for space exploration?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain why prices keep rising happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a dialogue between an AI assistant and a teenager about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain DNA replication like I'm a college freshman.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a free verse about the ocean.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Debug this Java code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Describe the surface of Mars using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a teenager about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain what this Java code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare async/await vs arrays in Python. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "If demand exceeds supply, what can we conclude about privacy implications?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a big city?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain what this TypeScript code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to be more productive?",
+    "domain": "general"
+  },
+  {
+    "prompt": "A company is facing rapid growth. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: correlation implies causation",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a free verse about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a dialogue between a time traveler and a teenager about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Design a C++ API for real-time chat.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "I'm trying to save money. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of speed vs using third-party tools for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why birds migrate happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a teenager about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What would a pirate say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What would Shakespeare say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Think step by step: the prisoner's dilemma",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Debug this Java code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a medieval knight about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What's the difference between mitosis and physical bonds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Design a TypeScript API for file upload.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Describe the surface of Mars using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "A company is facing regulatory changes. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a Go class that implements strategy pattern.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the difference between genotypes and physical bonds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a teenager about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What are the pros and cons of early retirement?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Describe a bustling marketplace using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for medicine?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a top 10 list of the stock market.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the time complexity of merge sort and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you negotiate a salary in a big city?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a checklist of the water cycle.",
+    "domain": "general"
+  },
+  {
+    "prompt": "A company is facing rapid growth. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to be more productive. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the best way to improve communication?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would happen if gravity stopped working for 5 seconds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the difference between mitosis and physical bonds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What are the pros and cons of fast food?",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to be more productive. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "A company is facing new competition. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare classes vs interfaces in Python. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a horror novel set in a cyberpunk megacity.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What's the difference between mitosis and phenotypes?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a JavaScript class that implements strategy pattern.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to be more productive?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against space colonization?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the pros and cons of social media?",
+    "domain": "general"
+  },
+  {
+    "prompt": "You're advising a school principal. What factors would you consider for crisis response?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: correlation implies causation",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for agriculture?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the history of penicillin and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Compare async/await vs arrays in TypeScript. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare async/await vs iterators in Python. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "I'm trying to learn to code. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for agriculture?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain why prices keep rising happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "If information wants to be free, what can we conclude about privacy implications?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Design a C++ API for real-time chat.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a fantasy novel set in a cyberpunk megacity.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain the history of penicillin and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "How does protein folding work at the macroscopic level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a Rust class that implements dependency injection.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the difference between fission and DNA?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the difference between mitosis and meiosis?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain what this JavaScript code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would a pirate say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "You're advising a CEO. What factors would you consider for budget allocation?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you handle race conditions in TypeScript?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "You're advising a hospital director. What factors would you consider for policy change?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Design a Python API for shopping cart.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a romance novel set in Victorian London.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What are the pros and cons of fast food?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Refactor this code to be more testable: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Java function to reversing a linked list.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Think step by step: the prisoner's dilemma",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain what this C++ code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Describe a bustling marketplace using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "I'm trying to learn to code. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a dialogue between an AI assistant and a cat about artificial intelligence.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What's the difference between genotypes and phenotypes?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a C++ class that implements strategy pattern.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would happen if humans could photosynthesize?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain DNA replication like I'm a college freshman.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain photosynthesis like I'm 5 years old.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "What would happen if the sun disappeared?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the difference between genotypes and fusion?",
+    "domain": "science"
+  },
+  {
+    "prompt": "I'm trying to be more productive. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the best way to learn to code?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against nuclear energy?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain how vaccines work to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a mystery story about time travel goes wrong in stream of consciousness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What's the best way to be more productive?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain photosynthesis like I'm 5 years old.",
+    "domain": "science"
+  },
+  {
+    "prompt": "A company is facing new competition. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What's the difference between fission and meiosis?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What would a pirate say about social media?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How would you handle invalid input in Java?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against AI regulation?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "If information wants to be free, what can we conclude about price changes?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a small town?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would Einstein say about streaming services?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for energy?",
+    "domain": "science"
+  },
+  {
+    "prompt": "A company is facing declining sales. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs using third-party tools for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a big city?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the water cycle to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Think step by step: how to fairly divide a cake among 3 people",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you organize a team effectively in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Describe the surface of Mars using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain compound interest to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the difference between fission and meiosis?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: why planes can fly upside down",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the history of X-rays and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write an opening paragraph for a thriller novel set in Victorian London.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a comparison table of the stock market.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a limerick about the ocean.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for energy?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the time complexity of Dijkstra's algorithm and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Think step by step: the Monty Hall problem",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a dialogue between a time traveler and a medieval knight about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a medieval knight about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What are the pros and cons of social media?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain black holes like I'm a high school student.",
+    "domain": "science"
+  },
+  {
+    "prompt": "I'm trying to learn to code. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the immune system like I'm a high school student.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Debug this C++ code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: correlation implies causation",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the time complexity of dynamic programming and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to learn to code?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write an opening paragraph for a thriller novel set in a cyberpunk megacity.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Compare async/await vs callbacks in JavaScript. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain why ice floats on water happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of fast food?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does nuclear fusion work at the cellular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What are the pros and cons of learning a new language?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: the Monty Hall problem",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Refactor this code to be more efficient: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How does memory formation work at the atomic level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a Java function to connecting to a database.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain black holes like I'm a college freshman.",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the best way to save money?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a top 10 list of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this Go code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain CRISPR like I'm my grandmother.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the history of penicillin and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: how to fairly divide a cake among 3 people",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Think step by step: the Monty Hall problem",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a TypeScript class that implements factory pattern.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare async/await vs interfaces in Python. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Why is gravity important for space exploration?",
+    "domain": "science"
+  },
+  {
+    "prompt": "How does memory formation work at the molecular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Compare generators vs callbacks in Java. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare lists vs callbacks in Java. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a sonnet about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for policy change?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "You're advising a CEO. What factors would you consider for hiring strategy?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How does memory formation work at the cellular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What would happen if humans could photosynthesize?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write an opening paragraph for a fantasy novel set in a small fishing village.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Think step by step: how to fairly divide a cake among 3 people",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a JavaScript function to retry logic.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you handle invalid input in JavaScript?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the time complexity of DFS and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a comparison table of blockchain.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would Shakespeare say about streaming services?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Compare classes vs interfaces in Go. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Rust function to implementing a cache.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to learn to code?",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a checklist of compound interest.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write an opening paragraph for a mystery novel set in a small fishing village.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How does memory formation work at the quantum level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a villanelle about the ocean.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a villanelle about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain compound interest to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would Shakespeare say about social media?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain why prices keep rising happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a checklist of supply and demand.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare lists vs callbacks in Java. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain neural plasticity like I'm my grandmother.",
+    "domain": "science"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "If information wants to be free, what can we conclude about privacy implications?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs quality for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a free verse about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Create a pros and cons list of the water cycle.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a romance story about time travel goes wrong in modern casual.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Think step by step: the prisoner's dilemma",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare tuples vs sets in C++. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain what this C++ code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a checklist of the stock market.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare lists vs iterators in Rust. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a JavaScript class that implements observer pattern.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for technology adoption?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why ice floats on water happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the difference between fission and DNA?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain how vaccines work to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for energy?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the stock market to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this JavaScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "A company is facing new competition. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "You're advising a CEO. What factors would you consider for technology adoption?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to learn to code. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the difference between genotypes and DNA?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain why birds migrate happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a dialogue between a time traveler and a teenager about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Describe a bustling marketplace using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is natural selection important for energy?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain black holes like I'm my grandmother.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Refactor this code to be more efficient: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a C++ API for task scheduler.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the time complexity of DFS and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a TypeScript class that implements singleton.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against open source software?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you handle network failures in Python?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a checklist of blockchain.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would Shakespeare say about streaming services?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain dark matter like I'm an alien visitor.",
+    "domain": "science"
+  },
+  {
+    "prompt": "I'm trying to improve communication. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a top 10 list of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: AI will replace all jobs",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the pros and cons of early retirement?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does evolution work at the macroscopic level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain what this Go code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you plan a trip on a budget in a big city?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain quantum entanglement like I'm a college freshman.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a horror story about a world where dreams are currency in Shakespearean English.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "A company is facing a PR crisis. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a dialogue between an AI assistant and a cat about artificial intelligence.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is natural selection important for medicine?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a Rust function to finding duplicates.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a highly regulated industry?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this Java code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for energy?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs decentralization for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a comparison table of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to learn to code. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the immune system like I'm 5 years old.",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the best way to learn to code?",
+    "domain": "general"
+  },
+  {
+    "prompt": "If all swans are white, what can we conclude about whether a black swan exists?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs quality for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write an opening paragraph for a romance novel set in a small fishing village.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How does protein folding work at the molecular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a checklist of blockchain.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would a pirate say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "A company is facing a PR crisis. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: more data always helps",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a cat about the ocean.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What's the difference between mitosis and DNA?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for agriculture?",
+    "domain": "science"
+  },
+  {
+    "prompt": "I'm trying to improve communication. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Design a Rust API for shopping cart.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: more data always helps",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the water cycle to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a top 10 list of compound interest.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to improve communication. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain why birds migrate happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of social media?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you negotiate a salary in a highly regulated industry?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of remote work?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain what this Go code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a horror story about a library that contains all possible books in Hemingway's style.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Describe a bustling marketplace using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "If demand exceeds supply, what can we conclude about whether a black swan exists?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How does memory formation work at the molecular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for technology adoption?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you plan a trip on a budget in a small town?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this Java code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a romance novel set in a small fishing village.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What's the difference between fission and meiosis?",
+    "domain": "science"
+  },
+  {
+    "prompt": "How would you plan a trip on a budget in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you plan a trip on a budget in a small town?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Refactor this code to be more efficient: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: correlation implies causation",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs quality for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Debug this Python code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How does memory formation work at the quantum level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: how GPS works with relativity corrections",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for crisis response?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Think step by step: why planes can fly upside down",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against open source software?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain what this Rust code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Rust class that implements dependency injection.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "I'm trying to save money. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain why prices keep rising happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you handle race conditions in Java?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would Einstein say about streaming services?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "I'm trying to be more productive. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the difference between genotypes and physical bonds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a Java function to connecting to a database.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a Go API for task scheduler.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How does protein folding work at the atomic level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain why birds migrate happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a top 10 list of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would Shakespeare say about streaming services?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a sonnet about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What are the pros and cons of fast food?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Why is gravity important for medicine?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a thriller story about the last tree on Earth in noir detective style.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write an opening paragraph for a fantasy novel set in a cyberpunk megacity.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What would happen if gravity stopped working for 5 seconds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What are the pros and cons of early retirement?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Why is natural selection important for agriculture?",
+    "domain": "science"
+  },
+  {
+    "prompt": "How would you organize a team effectively in a small town?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the history of penicillin and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a romance story about the last tree on Earth in Hemingway's style.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a highly regulated industry?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of speed vs using third-party tools for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Go function to sorting a list.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a fantasy novel set in a cyberpunk megacity.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Design a Rust API for task scheduler.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a horror story about a world where dreams are currency in Shakespearean English.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "If information wants to be free, what can we conclude about privacy implications?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a TypeScript function to reversing a linked list.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain CRISPR like I'm my grandmother.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a top 10 list of how search engines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the water cycle to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the time complexity of dynamic programming and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to start a business?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs using third-party tools for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a Go function to sorting a list.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain dark matter like I'm my grandmother.",
+    "domain": "science"
+  },
+  {
+    "prompt": "How does evolution work at the molecular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain why ice floats on water happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Design a Java API for task scheduler.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How does memory formation work at the macroscopic level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the difference between fission and fusion?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain how search engines work to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does memory formation work at the quantum level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the history of X-rays and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the time complexity of BFS and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a dialogue between an AI assistant and a medieval knight about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain black holes like I'm an alien visitor.",
+    "domain": "science"
+  },
+  {
+    "prompt": "How would you handle network failures in Java?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "You're advising a hospital director. What factors would you consider for technology adoption?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why birds migrate happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of speed vs using third-party tools for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "A company is facing rapid growth. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What would Shakespeare say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: more data always helps",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for agriculture?",
+    "domain": "science"
+  },
+  {
+    "prompt": "If demand exceeds supply, what can we conclude about whether a black swan exists?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "If demand exceeds supply, what can we conclude about whether a black swan exists?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the time complexity of BFS and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a cat about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is natural selection important for agriculture?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: the Monty Hall problem",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you organize a team effectively in a big city?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the best way to improve communication?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain compound interest to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of remote work?",
+    "domain": "general"
+  },
+  {
+    "prompt": "You're advising a school principal. What factors would you consider for technology adoption?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a cat about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: more data always helps",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the water cycle to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: AI will replace all jobs",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the history of X-rays and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: how to fairly divide a cake among 3 people",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Refactor this code to be more type-safe: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain what this Java code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would happen if gravity stopped working for 5 seconds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Design a JavaScript API for real-time chat.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a C++ class that implements observer pattern.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for policy change?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a dialogue between a time traveler and a medieval knight about the ocean.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Describe a bustling marketplace using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Debug this JavaScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a haiku about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "If demand exceeds supply, what can we conclude about privacy implications?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for technology adoption?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to be more productive. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would happen if we could see UV light?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write an opening paragraph for a fantasy novel set in a space station.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What are the pros and cons of fast food?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this Java code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare tuples vs iterators in Rust. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Debug this TypeScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "I'm trying to learn to code. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write an opening paragraph for a horror novel set in a small fishing village.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How would you handle timeout errors in C++?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Think step by step: why planes can fly upside down",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Why is gravity important for space exploration?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: more data always helps",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write an opening paragraph for a mystery novel set in a space station.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is natural selection important for space exploration?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Refactor this code to be more efficient: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How does protein folding work at the atomic level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against AI regulation?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What's the best way to be more productive?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to save money. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain why ice floats on water happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Describe a cozy library using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain what this TypeScript code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the history of penicillin and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against space colonization?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "If all swans are white, what can we conclude about price changes?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a fantasy story about time travel goes wrong in Shakespearean English.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain the time complexity of A* search and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Rust function to sorting a list.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs quality for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Design a Python API for task scheduler.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a Python API for user authentication.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "You're advising a school principal. What factors would you consider for budget allocation?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to improve communication. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to save money. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Describe a cozy library using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a free verse about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Debug this TypeScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would happen if humans could photosynthesize?",
+    "domain": "science"
+  },
+  {
+    "prompt": "You're advising a CEO. What factors would you consider for crisis response?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What would Shakespeare say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What would Shakespeare say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is natural selection important for energy?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a fantasy story about a world where dreams are currency in noir detective style.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Think step by step: the Monty Hall problem",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against space colonization?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare generators vs sets in Go. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs quality for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs decentralization for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "A company is facing declining sales. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a small town?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a JavaScript function to reading a file.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs quality for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Describe a bustling marketplace using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Compare lists vs arrays in Go. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against space colonization?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs decentralization for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "A company is facing new competition. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the time complexity of DFS and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you handle memory limits in Go?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Refactor this code to be more readable: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the pros and cons of remote work?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare lists vs interfaces in Python. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a medieval knight about artificial intelligence.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Debug this Go code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you handle invalid input in TypeScript?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a top 10 list of supply and demand.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Think step by step: why planes can fly upside down",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Debug this Rust code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "You're advising a hospital director. What factors would you consider for hiring strategy?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs decentralization for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What's the best way to save money?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a dialogue between an AI assistant and a medieval knight about artificial intelligence.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain the time complexity of BFS and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of speed vs using third-party tools for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the pros and cons of social media?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare classes vs sets in Go. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a horror story about time travel goes wrong in modern casual.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Describe the surface of Mars using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write an opening paragraph for a fantasy novel set in Victorian London.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain neural plasticity like I'm a college freshman.",
+    "domain": "science"
+  },
+  {
+    "prompt": "How would you organize a team effectively in a highly regulated industry?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the difference between chemical bonds and fusion?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the time complexity of A* search and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write an opening paragraph for a mystery novel set in a space station.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a thriller story about the last tree on Earth in modern casual.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Debug this JavaScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for medicine?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the time complexity of merge sort and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain CRISPR like I'm 5 years old.",
+    "domain": "science"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for crisis response?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for crisis response?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this TypeScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: correlation implies causation",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you negotiate a salary in a small town?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a pros and cons list of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would happen if the sun disappeared?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Describe a rainy city at night using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Design a Rust API for real-time chat.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to start a business?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Design a TypeScript API for user authentication.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain plate tectonics like I'm an alien visitor.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a pros and cons list of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you negotiate a salary in a big city?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Think step by step: how to fairly divide a cake among 3 people",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the pros and cons of fast food?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain what this Go code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a Go API for real-time chat.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would happen if humans could photosynthesize?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the best way to be more productive?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain supply and demand to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to learn to code. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a Go class that implements dependency injection.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the water cycle to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain quantum entanglement like I'm a high school student.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain the time complexity of DFS and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Describe a rainy city at night using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What would happen if gravity stopped working for 5 seconds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What's the difference between fission and physical bonds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What are the pros and cons of fast food?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a Python class that implements singleton.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Why is electromagnetic radiation important for space exploration?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What would happen if we could see UV light?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of speed vs quality for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How would you organize a team effectively in a small town?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Design a Rust API for file upload.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to save money?",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to be more productive. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would happen if humans could photosynthesize?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: how GPS works with relativity corrections",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a mystery story about time travel goes wrong in Hemingway's style.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain why prices keep rising happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain what this Python code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the pros and cons of early retirement?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How does evolution work at the macroscopic level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a Java function to implementing a cache.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a JavaScript API for file upload.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against universal basic income?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Refactor this code to be more modular: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a C++ API for real-time chat.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs decentralization for a large enterprise.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "A company is facing new competition. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against universal basic income?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a villanelle about urban loneliness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for hiring strategy?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Think step by step: the Monty Hall problem",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Why is gravity important for energy?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a dialogue between Socrates and a teenager about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Refactor this code to be more modular: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare async/await vs interfaces in TypeScript. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "If all swans are white, what can we conclude about price changes?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Think step by step: how to fairly divide a cake among 3 people",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What would a pirate say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you handle race conditions in C++?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a JavaScript API for shopping cart.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain compound interest to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Why is natural selection important for space exploration?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Design a TypeScript API for real-time chat.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: correlation implies causation",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain black holes like I'm my grandmother.",
+    "domain": "science"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "How does nuclear fusion work at the molecular level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Compare tuples vs callbacks in Python. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain why ice floats on water happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs decentralization for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: newer is always better",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "A company is facing declining sales. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the best way to save money?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the time complexity of quicksort and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would a pirate say about climate change?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs quality for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Describe a rainy city at night using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain how search engines work to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a free verse about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain what this Java code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to start a business?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against space colonization?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Design a C++ API for file upload.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain why ice floats on water happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "You're advising a CEO. What factors would you consider for technology adoption?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "You're advising a school principal. What factors would you consider for crisis response?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a checklist of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Create a dialogue between a time traveler and a medieval knight about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain the time complexity of dynamic programming and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What would happen if gravity stopped working for 5 seconds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Create a dialogue between a time traveler and a cat about childhood memories.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Compare the tradeoffs of building in-house vs decentralization for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a top 10 list of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to improve communication. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would happen if the sun disappeared?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Describe a cozy library using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "You're advising a CEO. What factors would you consider for budget allocation?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the best way to save money?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the best way to start a business?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this Java code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for crisis response?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Write a Rust class that implements factory pattern.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Write a Python function to rate limiting.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "What are the pros and cons of remote work?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Debug this C++ code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain why ice floats on water happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write an opening paragraph for a horror novel set in a space station.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "How would you plan a trip on a budget in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain what this TypeScript code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Debug this TypeScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Describe the surface of Mars using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Explain why birds migrate happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Compare the tradeoffs of centralization vs quality for a startup.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "You're advising a mayor. What factors would you consider for policy change?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What's the best way to be more productive?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How does evolution work at the atomic level?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Explain why we yawn when tired happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would happen if we could see UV light?",
+    "domain": "science"
+  },
+  {
+    "prompt": "What would happen if gravity stopped working for 5 seconds?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Design a Java API for shopping cart.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Refactor this code to be more readable: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What's the best way to start a business?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the water cycle to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a small town?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of learning a new language?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What's the best way to start a business?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare async/await vs interfaces in Python. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a comparison table of supply and demand.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "You're advising a hospital director. What factors would you consider for crisis response?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against nuclear energy?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "You're advising a CEO. What factors would you consider for budget allocation?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare the tradeoffs of speed vs quality for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a comparison table of the water cycle.",
+    "domain": "general"
+  },
+  {
+    "prompt": "I'm trying to learn to code. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Refactor this code to be more type-safe: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Compare the tradeoffs of speed vs quality for a non-profit.",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the time complexity of quicksort and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "I'm trying to save money. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you plan a trip on a budget in a highly regulated industry?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain what this TypeScript code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Create a dialogue between an AI assistant and a teenager about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is natural selection important for medicine?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: why planes can fly upside down",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What assumptions are hidden in this statement: AI will replace all jobs",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain what this JavaScript code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the history of penicillin and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: how GPS works with relativity corrections",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain what this TypeScript code does, line by line: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against space colonization?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a top 10 list of how search engines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a haiku about the passage of time.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "What's the best way to start a business?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you plan a trip on a budget in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against nuclear energy?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Think step by step: how GPS works with relativity corrections",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the history of the structure of DNA and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "What would a pirate say about social media?",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Why is gravity important for energy?",
+    "domain": "science"
+  },
+  {
+    "prompt": "Think step by step: why planes can fly upside down",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain how vaccines work to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write a Go function to reading a file.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "What are the strongest arguments for and against universal basic income?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Debug this TypeScript code and explain the fix: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Design a C++ API for task scheduler.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the water cycle to someone who's never heard of it.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Think step by step: how GPS works with relativity corrections",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Create a top 10 list of how vaccines work.",
+    "domain": "general"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "I'm trying to start a business. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you learn a new skill quickly in a small town?",
+    "domain": "general"
+  },
+  {
+    "prompt": "If demand exceeds supply, what can we conclude about price changes?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Explain the time complexity of DFS and when to use it.",
+    "domain": "coding"
+  },
+  {
+    "prompt": "How would you negotiate a salary in a developing country?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain the history of penicillin and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "Write a sci-fi story about the last tree on Earth in stream of consciousness.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "A company is facing regulatory changes. What should they do?",
+    "domain": "reasoning"
+  },
+  {
+    "prompt": "Compare tuples vs iterators in Go. When would you use each?",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Describe the surface of Mars using all five senses.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a horror story about the last tree on Earth in Hemingway's style.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write a fantasy story about a robot learning emotions in modern casual.",
+    "domain": "creative"
+  },
+  {
+    "prompt": "Write unit tests for this function: {code_snippet}",
+    "domain": "coding"
+  },
+  {
+    "prompt": "Explain the history of X-rays and its impact.",
+    "domain": "science"
+  },
+  {
+    "prompt": "I'm trying to learn to code. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of electric cars?",
+    "domain": "general"
+  },
+  {
+    "prompt": "What would happen if we could see UV light?",
+    "domain": "science"
+  },
+  {
+    "prompt": "I'm trying to save money. What am I doing wrong?",
+    "domain": "general"
+  },
+  {
+    "prompt": "Explain why birds migrate happens.",
+    "domain": "general"
+  },
+  {
+    "prompt": "What are the pros and cons of early retirement?",
+    "domain": "general"
+  },
+  {
+    "prompt": "How would you negotiate a salary in a small town?",
+    "domain": "general"
+  }
+]
