@@ -92,7 +92,7 @@ def get_agent_llm(llm_choice: str):
     Options:
       - "openai"    → uses OpenAI API (needs OPENAI_API_KEY)
       - "anthropic" → uses Anthropic API (needs ANTHROPIC_API_KEY)  
-      - "ollama"    → uses local Ollama (FREE! needs ollama running)
+      - "ollama"    → uses local Ollama (FREE! needs ollama running, uses phi3:3.8b)
       - "google"    → uses Google Gemini API (needs GOOGLE_API_KEY)
     """
     if llm_choice == "openai":
@@ -105,7 +105,9 @@ def get_agent_llm(llm_choice: str):
     
     elif llm_choice == "ollama":
         from langchain_ollama import ChatOllama
-        return ChatOllama(model="llama3.1:8b", base_url="http://localhost:11434")
+        # phi3:3.8b — tiny but smart enough for browser automation
+        # Falls back to qwen2.5:3b or llama3.2:3b if not available
+        return ChatOllama(model="phi3:3.8b", base_url="http://localhost:11434")
     
     elif llm_choice == "google":
         from langchain_google_genai import ChatGoogleGenerativeAI

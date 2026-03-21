@@ -40,6 +40,8 @@ python collect/browser_collector.py --provider chatgpt --num-prompts 100
 python collect/browser_collector.py --provider claude --num-prompts 100
 
 # Use FREE Ollama to power the agent (no paid API at all!)
+# Uses phi3:3.8b — tiny but smart enough for browser tasks
+# First: ollama pull phi3:3.8b
 python collect/browser_collector.py --provider chatgpt --agent-llm ollama
 
 # Multi-provider (collect from all at once!)
