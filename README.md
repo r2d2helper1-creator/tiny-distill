@@ -26,7 +26,18 @@ Create a small, fast, private AI model from big models like ChatGPT, Claude, or 
 
 ## 🚀 Quick Start
 
-### Option 1: Browser Automation (One command, fully automatic!)
+### Option 1: Resilient Collection (handles rate limits automatically!)
+
+```bash
+# Collects from arena.ai, falls back to ChatGPT, Claude, then Ollama
+# Auto-rotates sessions when limits hit. Saves progress. Resumes if crashed.
+python collect/resilient_collector.py --providers arena,chatgpt,claude,ollama --num-prompts 500
+
+# With proxy rotation (for IP-based limits)
+python collect/resilient_collector.py --proxies-file proxies.txt
+```
+
+### Option 2: Browser Automation (one provider)
 
 ```bash
 # Install
@@ -109,6 +120,7 @@ python train/train_bitnet.py --data data/my_dataset.jsonl --output models/my-mod
 ```
 tiny-distill/
 ├── collect/
+│   ├── resilient_collector.py # 🛡️ Rate-limit proof! Auto-rotation, fallback, resume
 │   ├── browser_collector.py  # 🤖 Browser automation (THE MAGIC — fully automatic!)
 │   ├── manual_collector.py    # Chat-based data collection (no API key)
 │   ├── ollama_collector.py    # Ollama cloud + local collection (FREE!)
