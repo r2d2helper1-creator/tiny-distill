@@ -26,6 +26,7 @@ import uuid
 import time
 import random
 import re
+import asyncio
 import argparse
 from datetime import datetime
 from pathlib import Path
@@ -393,8 +394,6 @@ class ArenaCollector:
 
 
 # ─── Async Main ──────────────────────────────────────────────────────────────
-
-import asyncio
 
 async def main_async(args):
     # Load prompts

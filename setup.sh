@@ -148,7 +148,7 @@ echo -e "  ${BOLD}4)${NC} 🔑 API (fastest, costs money)"
 echo -e "     ${DIM}Uses OpenAI/Anthropic API. ~$5 for 1000 prompts.${NC}"
 echo ""
 
-ask "Which method? [1-4]:" METHOD
+ask "Which method? [1-5]:" METHOD
 METHOD=${METHOD:-1}
 
 # ─── Step 4: Set up collection ───────────────────────────────────────────────
