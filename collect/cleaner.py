@@ -198,8 +198,8 @@ if __name__ == "__main__":
             files.extend(glob.glob(pattern))
     else:
         files = list(Path(args.input_dir).glob("*.jsonl"))
-        # Exclude already-cleaned files
-        files = [f for f in files if "cleaned" not in f.name]
+        # Exclude already-cleaned files and progress files (used for resume)
+        files = [f for f in files if "cleaned" not in f.name.lower() and "progress" not in f.name.lower()]
     
     if not files:
         print("❌ No input files found")
