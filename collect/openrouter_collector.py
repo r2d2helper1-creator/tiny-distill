@@ -134,6 +134,13 @@ def is_rate_limit_error(response: requests.Response) -> bool:
         return False
 
 
+# ─── Network Resilience Settings ────────────────────────────────────────────
+
+NETWORK_TIMEOUT = 30  # seconds per API call attempt
+MAX_NETWORK_RETRIES = 5
+NETWORK_BACKOFF_FACTOR = 2
+
+
 # ─── OpenRouter Collector ───────────────────────────────────────────────────
 
 class OpenRouterCollector:
@@ -176,7 +183,7 @@ class OpenRouterCollector:
         log.debug(f"Saved entry: id={entry['id'][:8]} prompt={entry['prompt'][:40]}...")
     
     def _call_api(self, prompt: str, system_prompt: Optional[str] = None) -> str:
-        """Make a single API call to OpenRouter."""
+        """Make a single API call to OpenRouter with network resilience."""
         
         log.debug(f"API call start | model={self.model} | prompt_len={len(prompt)}")
         
@@ -199,22 +206,37 @@ class OpenRouterCollector:
             "temperature": 0.7,
         }
         
-        try:
-            response = requests.post(
-                OPENROUTER_API_URL,
-                headers=headers,
-                json=payload,
-                timeout=120
-            )
-        except requests.exceptions.Timeout:
-            log.error("API call timed out after 120s")
-            return "ERROR: Request timed out after 120s"
-        except requests.exceptions.ConnectionError as e:
-            log.error(f"API connection error: {e}")
-            return f"ERROR: Connection failed - {e}"
-        except Exception as e:
-            log.error(f"API call exception: {e}")
-            return f"ERROR: {e}"
+        # Network resilience: retry on connection errors/timeouts
+        for attempt in range(MAX_NETWORK_RETRIES + 1):
+            try:
+                response = requests.post(
+                    OPENROUTER_API_URL,
+                    headers=headers,
+                    json=payload,
+                    timeout=NETWORK_TIMEOUT
+                )
+                
+                # If we got here, the request succeeded (network-wise)
+                break
+                
+            except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+                if attempt < MAX_NETWORK_RETRIES:
+                    wait_time = NETWORK_BACKOFF_FACTOR ** attempt  # Exponential backoff: 1, 2, 4, 8, 16 seconds
+                    log.warning(f"Network error on attempt {attempt+1}/{MAX_NETWORK_RETRIES+1}: {type(e).__name__} | retrying in {wait_time}s")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    log.error(f"Max network retries exceeded ({MAX_NETWORK_RETRIES}) | last error: {e}")
+                    return f"ERROR: Network failed after {MAX_NETWORK_RETRIES} retries - {type(e).__name__}"
+            except Exception as e:
+                # Non-network exception, don't retry
+                log.error(f"API call exception (non-network): {e}")
+                return f"ERROR: {e}"
+        
+        # If we exited the loop without breaking, all retries failed
+        else:
+            log.error(f"Max network retries exceeded ({MAX_NETWORK_RETRIES})")
+            return f"ERROR: Network failed after {MAX_NETWORK_RETRIES} retries"
         
         log.debug(f"API response | status={response.status_code} | latency={response.elapsed.total_seconds():.1f}s")
         
