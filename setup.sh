@@ -249,19 +249,23 @@ step "3" "Choose how to collect training data"
 echo -e "  You need to collect 1000 prompt-response pairs from AI models."
 echo -e "  Choose your method:"
 echo ""
-echo -e "  ${BOLD}1)${NC} 🏟️  Arena.ai (BEST — 398+ free models!)"
+echo -e "  ${BOLD}1)${NC} 📡 OpenRouter API (RECOMMENDED — fast, reliable, 100+ models!)"
+echo -e "     ${DIM}Claude, GPT, Gemini, Llama — all via one API key.${NC}"
+echo -e "     ${DIM}Just HTTP calls. No browser. No login issues.${NC}"
+echo ""
+echo -e "  ${BOLD}2)${NC} 🏟️  Arena.ai (398+ free models, needs browser)"
 echo -e "     ${DIM}Claude Opus, GPT-5, Gemini 3, Grok 4 — all free!${NC}"
 echo -e "     ${DIM}Just needs a browser. Handles rate limits automatically.${NC}"
 echo ""
-echo -e "  ${BOLD}2)${NC} 🦙 Ollama (runs on your computer)"
+echo -e "  ${BOLD}3)${NC} 🦙 Ollama (runs on your computer)"
 echo -e "     ${DIM}Free. No limits. No API keys. Downloads a small model.${NC}"
 echo ""
-echo -e "  ${BOLD}3)${NC} 📋 Manual Copy-Paste"
+echo -e "  ${BOLD}4)${NC} 📋 Manual Copy-Paste"
 echo -e "     ${DIM}Shows you prompts, you paste into ChatGPT, paste back.${NC}"
 echo -e "     ${DIM}No install needed. Takes ~2 hours.${NC}"
 echo ""
 
-ask "Which method? [1-3]:" METHOD
+ask "Which method? [1-4]:" METHOD
 METHOD=${METHOD:-1}
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -271,9 +275,114 @@ METHOD=${METHOD:-1}
 case $METHOD in
 
     # ─────────────────────────────────────────────────────────────────────
-    # Option 1: Arena.ai
+    # Option 1: OpenRouter API (RECOMMENDED)
     # ─────────────────────────────────────────────────────────────────────
     1)
+        step "4a" "Setting up OpenRouter"
+        
+        info "Installing requests (if not already installed)..."
+        $PIP install --quiet requests
+        
+        # Get API key
+        if [ -n "$OPENROUTER_API_KEY" ]; then
+            info "Using OPENROUTER_API_KEY from environment"
+        else
+            echo ""
+            echo -e "  ${BOLD}Get your API key:${NC}"
+            echo -e "  1. Go to ${CYAN}https://openrouter.ai/keys${NC}"
+            echo -e "  2. Sign up (free)"
+            echo -e "  3. Create a new API key"
+            echo -e "  4. Paste it below"
+            echo ""
+            ask "Your OpenRouter API key:" OPENROUTER_API_KEY
+            
+            if [ -z "$OPENROUTER_API_KEY" ]; then
+                fail "No API key provided!"
+                exit 1
+            fi
+        fi
+        
+        # Verify the key works
+        info "Verifying API key..."
+        VERIFY=$($PYTHON -c "
+import requests, sys
+r = requests.get('https://openrouter.ai/api/v1/auth/key',
+    headers={'Authorization': 'Bearer $OPENROUTER_API_KEY'}, timeout=10)
+if r.status_code == 200:
+    data = r.json()['data']
+    print(f'Key valid! Usage: \${data.get(\"usage\", 0):.2f} / \${data.get(\"limit\", \"unlimited\")}')
+    sys.exit(0)
+else:
+    print(f'Key error: {r.status_code}')
+    sys.exit(1)
+" 2>&1)
+        
+        if [ $? -eq 0 ]; then
+            ok "$VERIFY"
+        else
+            fail "API key verification failed: $VERIFY"
+            exit 1
+        fi
+        
+        step "4b" "Choose your model"
+        
+        echo ""
+        echo -e "  ${BOLD}Available models:${NC}"
+        echo -e "  ${CYAN}Tier 1 (best quality):${NC}"
+        echo "    1) anthropic/claude-sonnet-4-6  (best value, fast + smart)"
+        echo "    2) anthropic/claude-opus-4-6    (best overall)"
+        echo "    3) openai/gpt-4o                (OpenAI strong)"
+        echo "    4) google/gemini-2.5-pro        (Google's best)"
+        echo -e "  ${CYAN}Tier 2 (cheaper/faster):${NC}"
+        echo "    5) anthropic/claude-haiku-3     (fast & cheap)"
+        echo "    6) openai/gpt-4o-mini           (fast & cheap)"
+        echo "    7) google/gemini-2.0-flash      (very fast)"
+        echo "    8) meta-llama/llama-3.3-70b-instruct (open source)"
+        echo -e "  ${CYAN}Multi-model:${NC}"
+        echo "    9) ALL tier 1 models (diversity for multi-teacher!)"
+        echo ""
+        
+        ask "Which model? [1-9]:" MODEL_CHOICE
+        MODEL_CHOICE=${MODEL_CHOICE:-1}
+        
+        case $MODEL_CHOICE in
+            1) MODEL="anthropic/claude-sonnet-4-6"; MULTI="" ;;
+            2) MODEL="anthropic/claude-opus-4-6"; MULTI="" ;;
+            3) MODEL="openai/gpt-4o"; MULTI="" ;;
+            4) MODEL="google/gemini-2.5-pro"; MULTI="" ;;
+            5) MODEL="anthropic/claude-haiku-3"; MULTI="" ;;
+            6) MODEL="openai/gpt-4o-mini"; MULTI="" ;;
+            7) MODEL="google/gemini-2.0-flash"; MULTI="" ;;
+            8) MODEL="meta-llama/llama-3.3-70b-instruct"; MULTI="" ;;
+            9) MODEL="anthropic/claude-sonnet-4-6"; MULTI="--multi-model --models anthropic/claude-sonnet-4-6,openai/gpt-4o,google/gemini-2.0-flash" ;;
+            *) MODEL="anthropic/claude-sonnet-4-6"; MULTI="" ;;
+        esac
+        
+        ask "How many prompts? [1000]:" NUM_PROMPTS
+        NUM_PROMPTS=${NUM_PROMPTS:-1000}
+        
+        echo ""
+        if [ -n "$MULTI" ]; then
+            echo -e "  ${BOLD}Collecting $NUM_PROMPTS prompts from MULTIPLE models${NC}"
+        else
+            echo -e "  ${BOLD}Collecting $NUM_PROMPTS prompts from $MODEL${NC}"
+        fi
+        echo -e "  ${DIM}API calls. Fast. Reliable. Progress saved as you go.${NC}"
+        echo ""
+        confirm
+        
+        $PYTHON "$SCRIPT_DIR/collect/openrouter_collector.py" \
+            --api-key "$OPENROUTER_API_KEY" \
+            --model $MODEL \
+            --num-prompts $NUM_PROMPTS \
+            --output "$SCRIPT_DIR/data/raw_dataset.jsonl" \
+            $MULTI
+        ;;
+
+    # ─────────────────────────────────────────────────────────────────────
+    # Option 2: Arena.ai
+    # ─────────────────────────────────────────────────────────────────────
+    2)
         step "4a" "Installing Playwright + Chromium"
         
         info "Installing playwright (Python package)..."
@@ -356,9 +465,9 @@ case $METHOD in
         ;;
 
     # ─────────────────────────────────────────────────────────────────────
-    # Option 2: Ollama
+    # Option 3: Ollama
     # ─────────────────────────────────────────────────────────────────────
-    2)
+    3)
         step "4a" "Setting up Ollama"
         
         if command -v ollama &> /dev/null; then
@@ -416,9 +525,9 @@ case $METHOD in
         ;;
 
     # ─────────────────────────────────────────────────────────────────────
-    # Option 3: Manual
+    # Option 4: Manual
     # ─────────────────────────────────────────────────────────────────────
-    3)
+    4)
         step "4" "Manual collection"
         echo ""
         echo -e "  The collector will show you prompts one by one."

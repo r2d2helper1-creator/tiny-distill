@@ -152,6 +152,36 @@ class ArenaCollector:
         except:
             pass
     
+    async def _dismiss_popups(self, page):
+        """Dismiss cookie consent and any other popups."""
+        popup_selectors = [
+            'button:has-text("Accept")',
+            'button:has-text("Accept Cookies")',
+            'button:has-text("Accept All")',
+            'button:has-text("I agree")',
+            'button:has-text("I accept")',
+            'button:has-text("Got it")',
+            'button:has-text("OK")',
+            'button:has-text("Close")',
+            'button:has-text("Dismiss")',
+            'button:has-text("Skip")',
+            '[class*="cookie"] button',
+            '[class*="consent"] button',
+            '[class*="modal"] button:has-text("Accept")',
+            '[role="dialog"] button:has-text("Accept")',
+        ]
+        for sel in popup_selectors:
+            try:
+                el = page.locator(sel).first
+                if await el.is_visible(timeout=1000):
+                    await el.click(timeout=3000)
+                    print(f"      🔘 Dismissed popup: {sel[:40]}")
+                    await asyncio.sleep(1)
+                    return True
+            except:
+                continue
+        return False
+
     async def _collect_single(self, page, prompt: str, model: str) -> str:
         """Collect a single response from arena.ai."""
         
@@ -159,6 +189,9 @@ class ArenaCollector:
             # Navigate to arena.ai
             await page.goto(self.ARENA_URL, wait_until='networkidle', timeout=30000)
             await asyncio.sleep(2)
+            
+            # Dismiss cookie consent / any popups
+            await self._dismiss_popups(page)
             
             # Try to select model (if there's a model selector)
             # Arena.ai might use "Direct Chat" or "Battle" mode
@@ -344,6 +377,10 @@ class ArenaCollector:
             
             if response.startswith("ERROR:"):
                 print(f"    ❌ {response}")
+                # Print running tally
+                success_count = len(self.completed)
+                fail_count = sum(1 for r in self.results[-(idx+1):] if str(r.get("response","")).startswith("ERROR:"))
+                print(f"    📊 Running: {success_count} ✅ / {fail_count} ❌")
                 idx += 1
                 session_count += 1
                 continue
@@ -365,6 +402,10 @@ class ArenaCollector:
             session_count += 1
             
             print(f"    ✅ ({len(response)} chars)")
+            
+            # Progress summary every 10 prompts
+            if len(self.completed) % 10 == 0:
+                print(f"\n    📊 Progress: {len(self.completed)}/{len(remaining)} collected so far")
             
             idx += 1
             
