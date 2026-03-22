@@ -324,39 +324,33 @@ else:
             exit 1
         fi
         
-        step "4b" "Choose your model"
+        step "4b" "Choosing model (default: claude-sonnet-4-6)"
         
         echo ""
-        echo -e "  ${BOLD}Available models:${NC}"
-        echo -e "  ${CYAN}Tier 1 (best quality):${NC}"
-        echo "    1) anthropic/claude-sonnet-4-6  (best value, fast + smart)"
-        echo "    2) anthropic/claude-opus-4-6    (best overall)"
-        echo "    3) openai/gpt-4o                (OpenAI strong)"
-        echo "    4) google/gemini-2.5-pro        (Google's best)"
-        echo -e "  ${CYAN}Tier 2 (cheaper/faster):${NC}"
-        echo "    5) anthropic/claude-haiku-3     (fast & cheap)"
-        echo "    6) openai/gpt-4o-mini           (fast & cheap)"
-        echo "    7) google/gemini-2.0-flash      (very fast)"
-        echo "    8) meta-llama/llama-3.3-70b-instruct (open source)"
-        echo -e "  ${CYAN}Multi-model:${NC}"
-        echo "    9) ALL tier 1 models (diversity for multi-teacher!)"
+        echo -e "  ${BOLD}Default model: ${GREEN}anthropic/claude-sonnet-4-6${NC} (best value!)"
+        echo -e "  ${DIM}Press Enter to use default, or type a different OpenRouter model ID${NC}"
         echo ""
         
-        ask "Which model? [1-9]:" MODEL_CHOICE
-        MODEL_CHOICE=${MODEL_CHOICE:-1}
+        ask "Model (or press Enter for default):" MODEL_CHOICE
         
-        case $MODEL_CHOICE in
-            1) MODEL="anthropic/claude-sonnet-4-6"; MULTI="" ;;
-            2) MODEL="anthropic/claude-opus-4-6"; MULTI="" ;;
-            3) MODEL="openai/gpt-4o"; MULTI="" ;;
-            4) MODEL="google/gemini-2.5-pro"; MULTI="" ;;
-            5) MODEL="anthropic/claude-haiku-3"; MULTI="" ;;
-            6) MODEL="openai/gpt-4o-mini"; MULTI="" ;;
-            7) MODEL="google/gemini-2.0-flash"; MULTI="" ;;
-            8) MODEL="meta-llama/llama-3.3-70b-instruct"; MULTI="" ;;
-            9) MODEL="anthropic/claude-sonnet-4-6"; MULTI="--multi-model --models anthropic/claude-sonnet-4-6,openai/gpt-4o,google/gemini-2.0-flash" ;;
-            *) MODEL="anthropic/claude-sonnet-4-6"; MULTI="" ;;
-        esac
+        if [ -z "$MODEL_CHOICE" ] || [ "$MODEL_CHOICE" = "1" ]; then
+            MODEL="anthropic/claude-sonnet-4-6"
+            echo -e "  ${GREEN}Using: $MODEL${NC}"
+        else
+            # Map number choices
+            case $MODEL_CHOICE in
+                2) MODEL="anthropic/claude-opus-4-6" ;;
+                3) MODEL="openai/gpt-4o" ;;
+                4) MODEL="google/gemini-2.5-pro" ;;
+                5) MODEL="anthropic/claude-haiku-3" ;;
+                6) MODEL="openai/gpt-4o-mini" ;;
+                7) MODEL="google/gemini-2.0-flash" ;;
+                8) MODEL="meta-llama/llama-3.3-70b-instruct" ;;
+                9) MODEL="anthropic/claude-sonnet-4-6"; MULTI="--multi-model --models anthropic/claude-sonnet-4-6,openai/gpt-4o,google/gemini-2.0-flash" ;;
+                *) MODEL="$MODEL_CHOICE" ;;
+            esac
+            echo -e "  ${GREEN}Using: $MODEL${NC}"
+        fi
         
         ask "How many prompts? [1000]:" NUM_PROMPTS
         NUM_PROMPTS=${NUM_PROMPTS:-1000}
