@@ -72,6 +72,14 @@ def setup_logging():
 
 log = logging.getLogger('openrouter')
 
+
+def ask_for_api_key(prompt: str) -> Optional[str]:
+    """Ask user for API key input."""
+    try:
+        return input(prompt).strip()
+    except (EOFError, KeyboardInterrupt):
+        return None
+
 # ─── Popular Models on OpenRouter ────────────────────────────────────────────
 
 # Tier 1: Top performers
@@ -262,6 +270,7 @@ class OpenRouterCollector:
         
         success_count = 0
         fail_count = 0
+        consecutive_rate_limits = 0  # Track consecutive rate limit failures
         start_time = time.time()
         
         for i, p in enumerate(remaining):
@@ -293,6 +302,7 @@ class OpenRouterCollector:
                         log.error(f"FAILED prompt after {self.max_retries+1} attempts | prompt={prompt_text[:80]} | last_error={response[:100]}")
                         print(f"    ❌ Failed after {self.max_retries} retries")
                         fail_count += 1
+                        consecutive_rate_limits = 0  # Reset on non-rate-limit error
                         break
                 
                 # Success!
@@ -310,6 +320,7 @@ class OpenRouterCollector:
                 self.completed.add(prompt_text)
                 self._save_entry(entry)
                 success_count += 1
+                consecutive_rate_limits = 0  # Reset consecutive rate limit counter on success
                 
                 elapsed = time.time() - start_time
                 rate = success_count / elapsed * 60  # per minute
@@ -321,11 +332,46 @@ class OpenRouterCollector:
                 print(f"    📊 Running: {success_count} ✅ / {fail_count} ❌ | {rate:.1f}/min | ~{remaining_est:.0f}min remaining")
                 break
             
+            else:
+                # This executes if we exited the retry loop normally (all retries exhausted)
+                # Check if we exited due to rate limit
+                if consecutive_rate_limits >= 10:
+                    log.error(f"Hit {consecutive_rate_limits} consecutive rate limit failures!")
+                    print(f"\n🚨 ALERT: {consecutive_rate_limits} consecutive rate limit failures detected!")
+                    print(f"This suggests your API key may be exhausted or blocked.")
+                    
+                    # Ask for new API key
+                    print(f"\n💡 Please:")
+                    print(f"   1. Check your OpenRouter usage at https://openrouter.ai/authorize")
+                    print(f"   2. Generate a new API key if needed")
+                    print(f"   3. Enter it below to continue")
+                    
+                    new_key = ask_for_api_key("Enter new OpenRouter API key (or press Enter to quit): ")
+                    if not new_key:
+                        log.info("User chose to quit after rate limit alert")
+                        print(f"\n👋 Stopping collection. Progress saved.")
+                        break  # Exit the collection loop
+                    
+                    # Update API key and reset counter
+                    log.info("API key updated by user")
+                    self.api_key = new_key
+                    consecutive_rate_limits = 0
+                    print(f"🔑 API key updated! Resuming collection...")
+                    # Retry the current prompt with new key
+                    continue
+                else:
+                    # Not enough consecutive rate limits to trigger alert, just count this failure
+                    consecutive_rate_limits += 1
+                    log.warning(f"Rate limit failure #{consecutive_rate_limits} for prompt")
+                    print(f"    ⚠️  Rate limit failure #{consecutive_rate_limits} - continuing...")
+                    fail_count += 1
+            
             # Small delay between requests to be nice to the API
             time.sleep(random.uniform(1, 3))
         
         elapsed_total = time.time() - start_time
         log.info(f"=== COLLECTION DONE === | success={success_count} | failed={fail_count} | "
+                f"consecutive_rate_limit_alerts={consecutive_rate_limits if consecutive_rate_limits >= 10 else 0} | "
                 f"elapsed={elapsed_total/60:.1f}min | entries_in_file={len(self.completed)}")
         
         print(f"\n✅ Collection complete: {success_count} success / {fail_count} failed in {elapsed_total/60:.1f}min")
